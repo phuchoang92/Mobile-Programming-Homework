@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="294dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/fromCurrencyText"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:paddingStart="10dp"
+            android:text="From: USD"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/numberToConvert"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:ems="10"
+            android:hint="Enter a number"
+            android:inputType="textPersonName"
+            android:paddingStart="10dp"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/toCurrencyText"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:paddingStart="10dp"
+            android:text="To: VND"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/resultNumber"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:ems="10"
+            android:hint="Result here"
+            android:inputType="textPersonName"
+            android:paddingStart="10dp" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <Button
+                android:id="@+id/buttonConvert"
+                android:layout_width="127dp"
+                android:layout_height="55dp"
+                android:text="Convert"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/buttonClear"
+                android:layout_width="102dp"
+                android:layout_height="55dp"
+                android:layout_marginStart="24dp"
+                android:text="Clear"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/buttonConvert"
+                app:layout_constraintTop_toTopOf="@+id/buttonConvert" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="380dp"
+            android:layout_height="33dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="From currency"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="380dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="8dp"
+            android:text="To currency"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/textView12"
+            app:layout_constraintTop_toBottomOf="@+id/fromCurrencyGroup" />
+
+        <RadioGroup
+            android:id="@+id/fromCurrencyGroup"
+            android:layout_width="380dp"
+            android:layout_height="168dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="@+id/textView12"
+            app:layout_constraintTop_toBottomOf="@+id/textView12">
+
+            <RadioGroup
+                android:layout_width="185dp"
+                android:layout_height="match_parent" >
+
+                <RadioButton
+                    android:id="@+id/radioButton21"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="RadioButton" />
+
+                <RadioButton
+                    android:id="@+id/radioButton22"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="RadioButton" />
+
+                <RadioButton
+                    android:id="@+id/radioButton23"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="RadioButton" />
+            </RadioGroup>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <RadioButton
+                    android:id="@+id/radioButton24"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="RadioButton" />
+
+                <RadioButton
+                    android:id="@+id/radioButton25"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="RadioButton" />
+
+                <RadioButton
+                    android:id="@+id/radioButton26"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="RadioButton" />
+            </RadioGroup>
+        </RadioGroup>
+
+        <RadioGroup
+            android:id="@+id/toCurrencyGroup"
+            android:layout_width="380dp"
+            android:layout_height="168dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintStart_toStartOf="@+id/textView13"
+            app:layout_constraintTop_toBottomOf="@+id/textView13">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RadioButton
+                    android:id="@+id/radioButton7"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="1dp"
+                    android:text="CNY"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <RadioButton
+                    android:id="@+id/radioButton8"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="5dp"
+                    android:text="EUR"
+                    app:layout_constraintStart_toStartOf="@+id/radioButton7"
+                    app:layout_constraintTop_toBottomOf="@id/radioButton7" />
+
+                <RadioButton
+                    android:id="@+id/radioButton9"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="36dp"
+                    android:text="KRW"
+                    app:layout_constraintStart_toEndOf="@+id/radioButton7"
+                    app:layout_constraintTop_toTopOf="@+id/radioButton7" />
+
+                <RadioButton
+                    android:id="@+id/radioButton10"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:text="USD"
+                    app:layout_constraintStart_toStartOf="@+id/radioButton9"
+                    app:layout_constraintTop_toTopOf="@+id/radioButton8" />
+
+                <RadioButton
+                    android:id="@+id/radioButton11"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="5dp"
+                    android:text="JPY"
+                    app:layout_constraintStart_toStartOf="@+id/radioButton8"
+                    app:layout_constraintTop_toBottomOf="@+id/radioButton8" />
+
+                <RadioButton
+                    android:id="@+id/radioButton12"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:text="VND"
+                    app:layout_constraintStart_toStartOf="@+id/radioButton10"
+                    app:layout_constraintTop_toTopOf="@+id/radioButton11" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/buttonOk"
+            android:layout_width="180dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="20dp"
+            android:text="Ok"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/toCurrencyGroup"
+            app:layout_constraintTop_toBottomOf="@+id/toCurrencyGroup" />
+
+        <Button
+            android:id="@+id/buttonCancel"
+            android:layout_width="180dp"
+            android:layout_height="56dp"
+            android:layout_marginEnd="1dp"
+            android:text="Cancel"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/toCurrencyGroup"
+            app:layout_constraintTop_toTopOf="@+id/buttonOk" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
